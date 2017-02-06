@@ -1,0 +1,23 @@
+{
+    "port": 4545,
+    "protocol": "http",
+    "name": "astronauts in space imposter",
+    "stubs": [{
+        "responses": [{
+            "is": {
+                "statusCode": 200,
+                "body": {
+                    "people": [{
+                        "craft": "USS Enterprise",
+                        "name": "James T Kirk"
+                    }, {
+                        "craft": "Nostromo",
+                        "name": "Ripley"
+                    }],
+                    "message": "success",
+                    "number": 2
+                }
+            }
+        }]
+    }]
+}
