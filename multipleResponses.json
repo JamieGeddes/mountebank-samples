@@ -1,0 +1,21 @@
+{
+  "port": 4545,
+  "protocol": "http",
+  "stubs": [{
+    "responses": [{
+      "is": {
+        "statusCode": 201,
+        "body": {
+          "result": "created"
+        }
+      }
+    }, {
+      "is": {
+        "statusCode": 200,
+        "body": {
+          "result": "exists"
+        }
+      }
+    }]
+  }]
+}
