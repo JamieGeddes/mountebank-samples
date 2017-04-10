@@ -1,57 +1,57 @@
 {
-	"port": 4545,
-	"protocol": "http",
-	"stubs": [{
-		"predicates": [{
-			"equals": {
-				"method": "POST",
-				"path": "/products/1"
-			}
-		}],
-		"responses": [{
-			"is": {
-				"statusCode": 201,
-				"headers": {
-					"Location": "http://localhost:4545/products/1",
-					"Content-Type": "application/json"
-				},
-				"body": {
-					"productId": 1
-				}
-			}
-		}, {
-			"is": {
-				"statusCode": 200,
-				"headers": {
-					"Content-Type": "application/json"
-				},
-				"body": {
-					"errorMsg": "Product has already been added"
-				}
-			}
-		}]
-	}, {
-		"predicates": [{
-			"equals": {
-				"method": "GET",
-				"path": "/products/1"
-			}
-		}],
-		"responses": [{
-			"is": {
-				"statusCode": 200,
-				"body": {
-					"productId": 12345,
-					"name": "widget",
-					"manufacturer": "Acme products"
-				}
-			}
-		}]
-	}, {
-		"responses": [{
-			"is": {
-				"statusCode": 404
-			}
-		}]
-	}]
+  "port": 4545,
+  "protocol": "http",
+  "stubs": [{
+    "predicates": [{
+      "equals": {
+        "method": "POST",
+        "path": "/products/1"
+      }
+    }],
+    "responses": [{
+      "is": {
+        "statusCode": 201,
+        "headers": {
+          "Location": "http://localhost:4545/products/1",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "productId": 1
+        }
+      }
+    }, {
+      "is": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "errorMsg": "Product has already been added"
+        }
+      }
+    }]
+  }, {
+    "predicates": [{
+      "equals": {
+        "method": "GET",
+        "path": "/products/1"
+      }
+    }],
+    "responses": [{
+      "is": {
+        "statusCode": 200,
+        "body": {
+          "productId": 12345,
+          "name": "widget",
+          "manufacturer": "Acme products"
+        }
+      }
+    }]
+  }, {
+    "responses": [{
+      "is": {
+        "statusCode": 404
+      }
+    }]
+  }]
 }
